@@ -106,7 +106,8 @@ export default class Vimeo extends React.Component {
           // Accounts for player border
           marginTop: -8,
           marginLeft: -10,
-          height: this.props.height
+          height: this.props.height,
+          ...StyleSheet.flatten(this.props.style)
         }}
         injectedJavaScript={injectedCode}
         source={{ uri: getVimeoPageURL(this.props.videoId) }}
